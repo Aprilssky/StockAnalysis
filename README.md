@@ -8,6 +8,13 @@
 - **数据预处理**: 检查并处理缺失值，计算每日涨跌幅、简单移动平均线等指标。
 - **技术分析**: 包括波动性分析、RSI 指标计算、均线交叉策略等。
 - **可视化**: 展示股价走势、每日收益率分布以及累计收益对比。
+- **选股因子计算**:
+  - 计算多种可用于选股的因子，包括但不限于：
+    - **每日收益率**：通过收盘价的百分比变化计算。
+    - **波动率**：通过过去 20 日的每日收益率标准差计算。
+    - **市盈率（PE）**：`PE = 收盘价 / 每股收益`。
+    - **市净率（PB）**：`PB = 收盘价 / 每股净资产`。
+  - 将多只股票的数据合并为一个文件，并保存为 CSV 格式，便于后续分析。
 
 ## 安装依赖
 
@@ -24,10 +31,12 @@ bash pip install akshare matplotlib pandas numpy
    ![Stock Price with Moving Averages](img/stock_analysis.png)
 
 2. **累计收益对比**:
-   ![Cumulative Returns](img/CumulativeReturns.png)
+   ![Cumulative Returns](img/Different_Strategy_CumulativeReturns.png)
+
 
 
 ## 贡献
+
 
 欢迎提交 PR 或报告问题！
 
